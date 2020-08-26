@@ -85,21 +85,3 @@ public class MyThread {
 
 
 }
-class CallableImpl implements Callable {
-    private List<List> splitLists;
-    private MapReduce mapReduce;
-    private List<Tuple> allTuples;
-    private int id;
-    CallableImpl(List<List> splitLists,MapReduce mapReduce,List<Tuple> allTuples,int id){
-        this.splitLists=splitLists;
-        this.mapReduce=mapReduce;
-        this.allTuples=allTuples;
-        this.id=id;
-    }
-    @Override
-    public Object call(){
-        List<Tuple> mappingTuples = mapReduce.mapping(splitLists.get(id));
-        allTuples.addAll(mappingTuples);
-        return this.allTuples;
-    }
-}
