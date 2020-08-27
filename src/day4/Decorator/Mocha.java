@@ -12,8 +12,8 @@ import day4.Coffee.Size;
  **/
 public class Mocha extends CondimentDecorator {
 
-    Beverage beverage;
-    int times;
+    private Beverage beverage;
+    private int times;
 
     public Mocha(Beverage beverage,int times) {
         this.beverage=beverage;

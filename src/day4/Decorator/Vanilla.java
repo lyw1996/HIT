@@ -9,8 +9,8 @@ import day4.Coffee.Size;
  * @date : 2020-08-27 16:45
  **/
 public class Vanilla extends CondimentDecorator {
-    Beverage beverage;
-    int times;
+    private Beverage beverage;
+    private int times;
 
     public Vanilla(Beverage beverage,int times) {
         this.beverage=beverage;

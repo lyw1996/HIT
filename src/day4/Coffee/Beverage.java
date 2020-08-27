@@ -10,7 +10,7 @@ import day4.Coffee.Temperature;
  **/
 public abstract class Beverage {
 
-    String description = "未知的咖啡";
+    private String description = "未知的咖啡";
 
     public String getDescription() {
         return description+getSize()+getTemperature();
