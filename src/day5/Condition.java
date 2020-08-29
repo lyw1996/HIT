@@ -10,6 +10,8 @@ package day5;
 public abstract class Condition {
     String expression;
 
+    public Condition() {};
+
     public Condition(String expression) {
         this.expression = expression;
     }
@@ -18,12 +20,18 @@ public abstract class Condition {
         return this.expression;
     }
 
-    public String and(Condition condition){
-
-        return this.expression+" and "+condition.getExpression();
+    public Condition and(Condition condition){
+       this.expression += " and "+condition.getExpression();
+       return this;
     }
 
-    public String or(Condition condition){
-        return this.expression+" or "+condition.getExpression();
+    public Condition or(Condition condition){
+        this.expression += " or "+condition.getExpression();
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "select * from Table where "+this.expression;
     }
 }

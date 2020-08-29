@@ -10,6 +10,6 @@ package day5;
 public class ContainsCondition extends Condition {
 
     public ContainsCondition(Property property, String input) {
-        this.expression="contains("+property.toString()+","+input+")";
+        this.expression="contains("+property.toString()+", \""+input+"\")";
     }
 }
